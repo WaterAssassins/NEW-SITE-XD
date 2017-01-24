@@ -1,0 +1,102 @@
+<template>
+<div class="header">
+    <header>
+        <div class="menu-wrapper">
+            <a id="nav-toggle" class="menu-button">
+                <span class="label">
+                    <span class="label-inner">menu</span>
+                </span>
+                <div class="burger-icon">
+                    <svg viewBox="0 0 20 20">
+                        <line x1="0" y1="5" x2="20" y2="5" data-svg-origin="10 5"></line>
+                        <line x1="0" y1="10" x2="20" y2="10" data-svg-origin="0 10"></line>
+                        <line x1="0" y1="15" x2="20" y2="15" data-svg-origin="0 15"></line>
+                    </svg>
+                </div>
+            </a>
+            <div class="menu-inner" id="nav">
+                <div class="menu-container">
+                    <div class="row middle-sm">
+                        <ul class="nav-list">
+                            <li><a class="nav-link" v-link="{ path: '/' }">Home</a></li>
+                            <li><a class="nav-link" v-link="{ path: '/auth/login' }">Login</a></li>
+                            <li><a class="nav-link" v-link="{ path: '/auth/register' }">Register</a></li>
+                            <li><a class="nav-link" v-link="{ path: '/auth/logout' }">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-circle" id="nav-circle"></div>
+        </div>
+    </header>
+</div>
+
+<!--
+
+<nav class="navbar navbar-default">
+	<div class="container">
+		<div class="navbar-header">
+			&lt;!&ndash; Collapsed Hamburger &ndash;&gt;
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			&lt;!&ndash; Branding Image &ndash;&gt;
+			<a class="navbar-brand" v-link="{ path: '/' }" style="padding-top: 19px;">
+				<i class="fa fa-btn fa-gear fa-spin"></i> {{ navTitle }}
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a v-link="{ path: '/' }">Home</a></li>
+				<li><a v-link="{ path: '/dogs' }" v-if="$root.authenticated">Dogs</a></li>
+			</ul>
+			&lt;!&ndash; Right Side Of Navbar &ndash;&gt;
+			<ul class="nav navbar-nav navbar-right">
+				&lt;!&ndash; Login / Registration Links for unauthenticated users &ndash;&gt;
+				<li v-if=" ! $root.authenticated"><a v-link="{ path: '/auth/login' }">Login</a></li>
+				<li v-if=" ! $root.authenticated"><a v-link="{ path: '/auth/register' }">Register</a></li>
+				&lt;!&ndash; Authenticated Right Dropdown &ndash;&gt;
+				<li class="dropdown" v-if="$root.authenticated">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+						{{ $root.user.name }} <span class="caret"></span>
+					</a>
+
+					<ul class="dropdown-menu" role="menu">
+						&lt;!&ndash; Settings &ndash;&gt;
+						<li class="dropdown-header">Settings</li>
+						<li>
+							<a v-link="{ path: '/auth/profile' }">
+								<i class="fa fa-btn fa-fw fa-user"></i>Your profile
+							</a>
+						</li>
+
+						&lt;!&ndash; Logout &ndash;&gt;
+						<li class="divider"></li>
+						<li>
+							<a v-link="{ path: '/auth/logout' }">
+								<i class="fa fa-btn fa-fw fa-sign-out"></i>Logout
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+-->
+</template>
+
+<script>
+module.exports = {
+    data: function () {
+        return {
+            navTitle: 'Vue.js'
+        }
+    },
+
+}
+</script>
+
